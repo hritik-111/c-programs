@@ -1,0 +1,74 @@
+//bubble sort
+#include <stdio.h>
+#include <stdlib.h>
+
+//bubble sort in descending order
+/*void bubblesort(int *arr, int n){
+   for(int i=0;i<n;i++)
+     for(int j=0;j<n-1-i;j++){
+        if(arr[j]<arr[j+1]){
+          //swap
+          int temp = arr[j];
+          arr[j] = arr[j+1];
+          arr[j+1] = temp;
+        }
+      }
+}*/
+
+/*void insertionsort(int *arr, int n){
+      int j, key;
+      for(int i=0;i<n;i++){
+        j= i-1; key = arr[i];
+        while(j>=0 && key <arr[j]){
+          arr[j+1] = arr[j];
+          j--;
+        }
+        arr[j+1] = key;
+      }
+}*/
+
+/*void selectionsort(int *arr, int n){
+  int minindex, temp;
+  for(int i=0; i<n; i++){
+    minindex = i;
+    for(int j=i;j<n;j++){
+      if(arr[j]>arr[minindex])
+          minindex = j;
+    }
+    temp =arr[i];
+    arr[i]=arr[minindex];
+    arr[minindex]=temp;
+  }
+}*/
+
+void printarr(int *arr,int n){
+  for(int i=0; i<n;i++)
+      printf("%d ", arr[i]);
+      printf("\n");
+}
+
+int main()
+{
+  
+    int arr[] = { 6, 65, 50, 64, 1, 24, 0, 45, 21, 35};
+    int size = sizeof(arr)/sizeof(arr[0]);
+    
+    printf("Array before sorting: ");
+    printarr(arr, size);
+    //printf("By bubble sort in descending order: ");
+    //bubblesort(arr, size);
+    //printarr(arr, size);
+    
+    //insertionsort(arr, size);
+    //printf("By insertion sort in ascending order: ");
+    //printarr(arr, size);
+    
+    //selectionsort(arr, size);
+    //printf("By selection sort in descending order: ");
+    //printarr(arr, size);
+    
+    
+    return 0;
+}
+
+
